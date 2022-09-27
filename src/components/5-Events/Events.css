@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+.events {
+  text-align: center;
+  margin-left: 5vw;
+  padding-left: 5vw;
+  padding-right: 2vw;
+  height: 100vh;
+  padding-top: 2rem;
+}
+
+.event-heading {
+  color: var(--brown-dark);
+  font-family: "PT Serif", serif;
+  font-weight: bold;
+  margin-bottom: 1vh;
+  font-size: var(--font-size-l);
+}
+
+.current-month {
+  text-align: start;
+  color: var(--navbar-blue);
+  font-family: "PT Serif", serif;
+  font-weight: bold;
+  font-size: var(--font-size-s);
+}
+
+.current-event {
+  text-align: start;
+  color: var(--navbar-blue);
+  font-family: "PT Serif", serif;
+  font-size: var(--font-size-xs);
+  margin-bottom: 4vh;
+}
+
+.calender {
+  display: grid;
+  grid-template: repeat(2, 1fr) / repeat(7, 1fr);
+  grid-gap: 0.1vh;
+}
+
+.calender-days {
+  display: grid;
+  grid-template: repeat(2, 1fr) / repeat(7, 1fr);
+}
+
+.week-card {
+  width: 12vw;
+  height: 3vh;
+  color: #000;
+  font-size: var(--font-size-xs);
+  font-family: "Lato", sans-serif;
+}
+
+.event-card {
+  border-radius: 5%;
+  width: 12vw;
+  height: 25vh;
+  box-shadow: 0 0 10px rgb(0, 0, 0, 0.2);
+  margin-bottom: 3vh;
+  padding: 2vh 2vw;
+}
+
+.event-date {
+  color: #640f12;
+  font-family: "PT Serif", serif;
+  font-weight: bold;
+  font-size: var(--font-size-s);
+  text-align: left;
+}
+
+.event-title {
+  color: #02263c;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: var(--font-size-xs);
+  text-align: left;
+  word-wrap: break-word;
+}
+
+@media screen and (max-width: 990px) {
+  .events {
+    text-align: center;
+    margin-left: 0;
+    padding-left: 3vw;
+    padding-right: 0vw;
+  }
+  .event-heading {
+    font-size: var(--font-size-mobile);
+  }
+
+  .current-month {
+    font-size: var(--font-size-xs);
+  }
+
+  .current-event {
+    font-size: var(--font-size-xxs);
+  }
+  .calender {
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+    grid-gap: 0vh;
+  }
+  .event-card {
+    border-radius: 5%;
+    width: 30vw;
+    height: 20vh;
+    margin-bottom: 2vh;
+    padding: 2vh 2vw;
+  }
+
+  .event-date {
+    font-size: var(--font-size-mobile);
+  }
+
+  .event-title {
+    font-size: var(--font-size-xxs);
+  }
+  .event-btn {
+    color: var(--brown-light);
+    background-color: var(--brown-dark);
+    border: none;
+    font-family: "PT Serif", serif;
+    font-size: var(--font-size-mobile-s);
+    text-align: left;
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    padding: 1vh 3vw;
+    position: relative;
+    left: -4vw;
+    top: 8vh;
+  }
+}

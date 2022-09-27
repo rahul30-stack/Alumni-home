@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+.news-container {
+  height: 100vh;
+  margin-left: 5vw;
+  padding-top: 2rem;
+  text-align: center;
+  font-family: "PT Serif", serif;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  
+}
+
+.news-heading {
+  color: var(--brown-dark);
+  font-weight: bold;
+  font-size: var(--font-size-s);
+  margin-bottom: 5vh;
+}
+
+.headline {
+  color: #640f12;
+  font-weight: bold;
+  font-size: var(--font-size-s);
+}
+
+.tagline_1 {
+  color: var(--brown-dirt-1);
+  font-weight: bold;
+  font-size: var(--font-size-xs);
+}
+
+.tagline_2 {
+  color: var(--brown-dirt-2);
+  opacity: 80%;
+  font-weight: bold;
+  font-size: var(--font-size-xs);
+  margin-bottom: 1vh;
+}
+
+.profile-card {
+  display: inline-block;
+  margin: 1vw;
+  padding: 1vw;
+  border-radius: 2%;
+  background-image: linear-gradient(
+    rgb(231, 225, 178, 1),
+    rgb(231, 225, 178, 0.46)
+  );
+  width: 19vw;
+  height: 70vh;
+  box-shadow: 0 0 20px rgb(109, 104, 81, 0.4), 0 0 10px rgb(109, 104, 81, 0.4);
+  text-align: center;
+}
+
+.profile-card,
+.profile-card .news-header,
+.profile-card .news-header .news-img,
+.profile-card .profile-bio {
+  overflow: hidden;
+  position: relative;
+  top: 0;
+  -webkit-transition: all 0.47s ease-out;
+  -moz-transition: all 0.47s ease-out;
+  -ms-transition: all 0.47s ease-out;
+  -o-transition: all 0.47s ease-out;
+  transition: all 0.47s ease-out;
+}
+
+.profile-card:hover .news-header {
+  top: -60vh;
+}
+
+.profile-card:hover .profile-bio {
+  top: -45vh;
+}
+.news-img {
+  text-align: center;
+  width: 100%;
+}
+
+.profile-bio p {
+  font-family: "Montserrat", sans-serif;
+  font-size: var(--font-size-xxs);
+  line-height: 1.5;
+  color: var(--blue-gray);
+  text-align: left;
+}
+
+@media screen and (max-width: 990px) {
+  .news-container {
+    height: 100vh;
+    margin-left: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .news-heading {
+    font-weight: bold;
+    font-size: var(--font-size-mobile);
+    margin-bottom: 3vh;
+    margin-top: 2vh;
+  }
+
+  .profile-card {
+    width: 45vw;
+    height: 40vh;
+  }
+  .headline {
+    font-size: var(--font-size-xs);
+  }
+  .tagline_1 {
+    font-size: var(--font-size-xxs);
+  }
+
+  .tagline_2 {
+    font-size: var(--font-size-xxs);
+  }
+  .profile-bio p {
+    font-size: var(--font-size-xxxs);
+  }
+  .profile-card:hover .news-header {
+    top: -30vh;
+  }
+
+  .profile-card:hover .profile-bio {
+    top: -20vh;
+  }
+}

@@ -1,0 +1,24 @@
+#video {
+  height: 100vh;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+  video {
+    object-fit: cover;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  #video {
+    height: 100vh;
+    margin-bottom: 25px;
+
+    video {
+      width: 100vw;
+    }
+  }
+}

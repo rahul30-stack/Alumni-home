@@ -1,0 +1,108 @@
+.sidebar {
+  min-width: 70px;
+  position: sticky;
+  float: left;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 6rem;
+  background: #02263c;
+  padding: 6px 14px;
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+}
+
+#nith {
+  height: 4rem;
+  padding: 5px;
+  filter: none;
+}
+
+#top {
+  margin-bottom: 4vh;
+}
+
+.sidebar li {
+  position: relative;
+  margin: 8px 0;
+  list-style: none;
+}
+
+.sidebar ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  margin-top: 5px;
+  justify-content: center;
+  height: 70vh;
+}
+
+.sidebar li .tooltip {
+  position: absolute;
+  top: -20px;
+  left: calc(100% + 15px);
+  z-index: 3;
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  opacity: 0;
+  white-space: nowrap;
+  pointer-events: none;
+  transition: 0s;
+}
+.sidebar li:hover .tooltip {
+  opacity: 1;
+  pointer-events: auto;
+  transition: all 0.4s ease;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.sidebar li a {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  border-radius: 12px;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+  background: #02263c;
+}
+
+.sidebar li a:hover {
+  background: rgb(255, 255, 255);
+}
+
+.sidebar li a:hover,
+.sidebar li a:hover img {
+  transition: all 0.5s ease;
+  filter: none;
+}
+
+.sidebar li img {
+  height: 3rem;
+  padding: 10px;
+  border-radius: 12px;
+    filter: invert(100%);
+}
+
+// section {
+//   display: block;
+//   height: 100%;
+//   width: 100%;
+//   padding: 60px;
+//   padding-left: 120px;
+//   box-sizing: border-box;
+// }
+
+@media (max-width: 990px) {
+  .sidebar {
+    display: none;
+  }
+}

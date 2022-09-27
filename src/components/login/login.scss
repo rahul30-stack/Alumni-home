@@ -1,0 +1,43 @@
+.btn {
+  position: fixed;
+  top: 5%;
+  right: 7%;
+  z-index: 10;
+
+  button {
+    background-color: transparent;
+    color: var(--yellow-hard);
+    display: inline-block;
+    position: relative;
+    border: none;
+    font-size: var(--font-size-xs);
+    cursor: pointer;
+    opacity: 0.8;
+    transition: 200ms;
+    font-weight: bold;
+  }
+
+button:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--yellow-hard);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+button:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+}
+
+@media (max-width: 990px) {
+  .btn {
+    display: none;
+  }
+}

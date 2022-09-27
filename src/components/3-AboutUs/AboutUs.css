@@ -1,0 +1,112 @@
+#aboutUs {
+  position: relative;
+  height: 100vh;
+  width: auto;
+  padding-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.images img {
+  height: 19rem;
+  width: 17rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: hidden;
+  margin: 0rem 2rem 3rem 2rem;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  -webkit-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
+  -webkit-box-shadow: 0px 30px 50px 0px rgba(109, 104, 81, 0.4);
+          box-shadow: 0px 30px 50px 0px rgba(109, 104, 81, 0.4);
+}
+
+.images img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-filter: none;
+          filter: none;
+}
+
+@media screen and (max-width: 420px) {
+  #aboutUs {
+    padding-left: 0;
+    height: unset;
+  }
+  .images {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .images img {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+    margin-bottom: 0px;
+  }
+  .images img:nth-child(1) {
+    display: none;
+  }
+  .images img:nth-child(3) {
+    display: none;
+  }
+}
+
+.aboutUsContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 80%;
+  margin-top: 25px;
+}
+
+.aboutUsContent h2 {
+  background-color: #f6f3e0;
+  color: #640f12;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: PT serif;
+  width: 100%;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  margin-bottom: 15px;
+}
+
+.aboutUsContent p {
+  text-align: center;
+  color: rgba(2, 38, 60, 0.7);
+  font-size: 24;
+  font-family: Roboto, Regular;
+}
+/*# sourceMappingURL=AboutUs.css.map */

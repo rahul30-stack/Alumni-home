@@ -1,0 +1,131 @@
+.sidebar {
+  min-width: 70px;
+  position: -webkit-sticky;
+  position: sticky;
+  float: left;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 6rem;
+  background: #02263c;
+  padding: 6px 14px;
+  z-index: 99;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#nith {
+  height: 4rem;
+  padding: 5px;
+  -webkit-filter: none;
+          filter: none;
+}
+
+#top {
+  margin-bottom: 4vh;
+}
+
+.sidebar li {
+  position: relative;
+  margin: 8px 0;
+  list-style: none;
+}
+
+.sidebar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 30px;
+  margin-top: 5px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 70vh;
+}
+
+.sidebar li .tooltip {
+  position: absolute;
+  top: -20px;
+  left: calc(100% + 15px);
+  z-index: 3;
+  background: #fff;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  opacity: 0;
+  white-space: nowrap;
+  pointer-events: none;
+  -webkit-transition: 0s;
+  transition: 0s;
+}
+
+.sidebar li:hover .tooltip {
+  opacity: 1;
+  pointer-events: auto;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.sidebar li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  border-radius: 12px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  background: #02263c;
+}
+
+.sidebar li a:hover {
+  background: white;
+}
+
+.sidebar li a:hover,
+.sidebar li a:hover img {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-filter: none;
+          filter: none;
+}
+
+.sidebar li img {
+  height: 3rem;
+  padding: 10px;
+  border-radius: 12px;
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+}
+
+@media (max-width: 990px) {
+  .sidebar {
+    display: none;
+  }
+}
+/*# sourceMappingURL=sidebar.css.map */

@@ -1,0 +1,52 @@
+.btn {
+  position: fixed;
+  top: 5%;
+  right: 7%;
+  z-index: 10;
+}
+
+.btn button {
+  background-color: transparent;
+  color: var(--yellow-hard);
+  display: inline-block;
+  position: relative;
+  border: none;
+  font-size: var(--font-size-xs);
+  cursor: pointer;
+  opacity: 0.8;
+  -webkit-transition: 200ms;
+  transition: 200ms;
+  font-weight: bold;
+}
+
+.btn button:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--yellow-hard);
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+  -webkit-transition: -webkit-transform 0.25s ease-out;
+  transition: -webkit-transform 0.25s ease-out;
+  transition: transform 0.25s ease-out;
+  transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
+}
+
+.btn button:hover:after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+}
+
+@media (max-width: 990px) {
+  .btn {
+    display: none;
+  }
+}
+/*# sourceMappingURL=login.css.map */

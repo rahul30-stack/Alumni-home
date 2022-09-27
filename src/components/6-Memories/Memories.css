@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif&display=swap");
+.memories {
+  height: 100vh;
+  margin-left: 5vw;
+  padding-left: 5vw;
+  padding-right: 2vw;
+}
+.memories-heading {
+  text-align: center;
+  position: relative;
+  top: 45vh;
+  color: var(--brown-dark);
+  font-family: "PT Serif", serif;
+  font-size: var(--font-size-l);
+  font-weight: bold;
+  z-index: 10;
+  background-image: linear-gradient(
+    to right,
+    rgb(255, 255, 240, 1),
+    rgb(255, 255, 223, 0.39)
+  );
+}
+
+.wrapper {
+  position: relative;
+  flex-grow: 1;
+  margin: auto;
+  max-width: 80vw;
+  max-height: 80vh;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-gap: 2vmin;
+  justify-items: center;
+}
+
+.wrapper img {
+  z-index: 1;
+  grid-column: span 2;
+  max-width: 100%;
+  margin-bottom: -52%;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  transform: scale(1);
+  transition: all 0.25s;
+  filter: grayscale(1);
+}
+.wrapper img:nth-child(7n + 1) {
+  grid-column: 2 / span 2;
+}
+
+.wrapper img:hover {
+  z-index: 2;
+  transform: scale(1.1);
+  filter: grayscale(0);
+}
+
+@media screen and (max-width: 990px) {
+  .memories {
+    height: 100vh;
+    margin-left: 0vw;
+    padding-left: 0vw;
+    padding-right: 0vw;
+    position: relative;
+  }
+
+  .memories-heading {
+    z-index: 1;
+    font-size: var(--font-size-s);
+  }
+
+  .wrapper {
+    position: absolute;
+    top: 39%;
+    left: 9%;
+    transform: rotate(90deg) scale(2.2);
+  }
+  .wrapper img:hover {
+    z-index: 2;
+    transform: scale(1.2);
+    filter: grayscale(0);
+  }
+}

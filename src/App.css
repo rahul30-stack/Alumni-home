@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --padding-main: 15vw;
+  --white-soft: #fefbf3;
+  --white-hard: #fcfafa;
+  --yellow-hard: #f2be11;
+  --navbar-blue: #02263c;
+  --brown-light: #f6f3e1;
+  --brown-dark: #640f12;
+  --brown-dirt-1: #6d6851;
+  --brown-dirt-2: #6d6854;
+  --blue-gray: #333;
+  --gray: #807d7d;
+  --black: #000;
+  --font-size-xl: 5rem;
+  --font-size-l: 3rem;
+  --font-size-s: 2.2rem;
+  --font-size-xs: 1.1rem;
+  --font-size-xxs: 0.8rem;
+  --font-size-xxxs: 0.7rem;
+  --font-size-mobile: 1.5rem;
+  --font-size-mobile-s: 0.5rem;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: var(--navbar-blue);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--yellow-hard);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--white-soft);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#master {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+section {
+  scroll-snap-align: start;
+}
+
+@media screen and (max-width: 990px) {
+  #master {
+    scroll-snap-type: none;
+  }
+
+  #video {
+    scroll-snap-align: center;
+  }
+}
+
+.navbar-show {
+  opacity: 1;
+  transition: 200ms ease;
+}
+.navbar-hide {
+  opacity: 0;
+  transition: 200ms ease;
+}

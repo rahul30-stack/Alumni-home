@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.footer {
+  text-align: center;
+  background-color: #f6f3e1;
+  padding: 2vh 15vw 2vh 20vw;
+}
+
+.contact {
+  color: #000;
+  font-size: var(--font-size-xs);
+  font-weight: bold;
+  font-family: "PT Serif", serif;
+  margin: 2vh;
+}
+
+.contact-icon-container {
+  text-align: center;
+  margin: 5vh 20vw;
+}
+
+.footer-icon {
+  margin: 1vh 1vw;
+  font-size: 1.5rem;
+  color: var(--black);
+  text-decoration: none;
+}
+
+.copyright {
+  color: var(--gray);
+  font-size: var(--font-size-xs);
+  font-weight: normal;
+  font-family: "Lato", sans-serif;
+}
+
+@media screen and (max-width: 990px) {
+  .footer {
+    padding: 2vh 2vw;
+  }
+  .contact {
+    font-size: var(--font-size-xs);
+    margin: 1vh;
+  }
+  .footer-icon {
+    font-size: var(--font-size-xs);
+    margin: 1vh;
+  }
+  .contact-icon-container {
+    text-align: center;
+    margin: 0;
+  }
+  .copyright {
+    font-size: var(--font-size-xxs);
+  }
+}
